@@ -1,5 +1,4 @@
-"""
-# functions
+# Functions
 
 def HelloWorld():
     print("Hello World") 
@@ -33,18 +32,19 @@ def Subs2Numbers (a = 0, b = 0):
 print(Subs2Numbers(b = 3.5, a = 5))
 print(Subs2Numbers(4, 5))
 
-# class
+# Class and objects
 class MyClass:
     def __init__(self, inner_variable = 0):
         self.innerVariable = inner_variable
     def Print(self):
         print(self.innerVariable)
 
-myObject = MyClass(-45)
-myObject.Print()
+myObject = MyClass(-45)             # Esta es la forma de crear un objeto a partír de una clase (instanciar)
+myObject.Print()                    # Se puede acceder a los miembros de un objeto (atributos, metodos) usando el operador "."
 myObject.innerVariable = 65535
 myObject.Print()
 
+# Class and object example
 class Car():
     def __init__(self, brand = "Toyota", color = "", motor_CC = 0, model = 0, kind = "", cost = 0.0):
         self.color = color
@@ -79,12 +79,11 @@ car1 = Car()
 print(car1)
 car2 = Car(color="red", motor_CC=1100, model=1998, kind="Van", cost=5000)
 car2.Print()
-"""
 
+# Modules
 import datetime, time
 import time as r
 from time import sleep as retardo
-
 
 print(datetime.datetime.today())
 

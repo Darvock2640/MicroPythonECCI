@@ -1,85 +1,4 @@
-"""
-#Character escaping
-dontWorry = "Don't worry about apostrophes"
-print(dontWorry)
-
-# The name of this ice-cream is "Sweet 'n' Tasty"
-print("The name of this ice-cream is \"Sweet 'n' Tasty\"")
-
-# Basic methods
-name = "Alejandro"
-print(name)
-print(name.upper())
-print(name.lower())
-print(name.lower().count('a'))
-
-# String formatting
-name = "Pepito Pérez"
-years = 16
-print("Hello, Python! My name is %s" % name)
-print("I'm %i years old" % years)
-print("Hello python! My name is {} and I'm {} years old".format(name, years))
-
-# list
-numbers = [1, 4, 23, 6, 3.54, "uno"]
-print(numbers)
-print(type(numbers))
-print(numbers[3])
-print(type(numbers[3]))
-print(numbers[2:5])
-
-# list operations
-animals = ['elephant', 'lion', 'mouse', 'horse', 'fish', 'dolphin']
-print(animals)
-animals += ['dog', 'cat']
-print(animals)
-#animals *= 2
-#print(animals)
-animals.append("snake")
-print(animals)
-animals[2] = "monkey"
-print(animals)
-
-#input
-X = input("Ingrese lo que sumercé considere necesario y luego oprima enter \n")
-print(X)
-print(type(X))
-nX = int(X)
-print(nX)
-print(type(nX))
-
-# list items (mutable)
-animals = ['elephant', 'lion', 'mouse', 'horse', 'fish', 'dolphin']
-print(animals)
-animals[1:3] = ["cat"]
-print(animals)
-animals[3:] = []
-print(animals)
-animals[:] = []
-print(animals)
-
-#Tuples (inmutable)
-vowels = ('A', 'E', 'I', 'O', 'U')
-print(vowels)
-print(len(vowels))
-
-# Dictionaries
-phoneBook = {"Pepe" : [1,2,3,4,5,6], "Juan" : 2445873, "Pedro" : 7263434}
-print(phoneBook)
-phoneBook["Juan"] = 1233211
-print(phoneBook)
-phoneBook["Maria"] = 9887766
-print(phoneBook)
-del phoneBook["Pedro"]
-print(phoneBook)
-print(phoneBook.values())
-print(phoneBook.keys())
-
-# in keyword
-phoneBook = {"Pepe" : [1,2,3,4,5,6], "Juan" : 2445873, "Pedro" : 7263434}
-print(2445873 in phoneBook.values())
-
-# conditions and boolean operators
+# Conditions and boolean operators
 name = "Juan"
 age = 24
 print(name == "pedro" or age > 25)
@@ -98,7 +17,7 @@ elif age > 45:
 else:
     print("Ese man no era")
 
-#for loop
+# for loop
 helloWorld = "Hello World"
 
 for letra in helloWorld:
@@ -121,7 +40,7 @@ print(temp2)
 for n in range(11):
     print(n*10)
 
-#while
+# while
 
 square = 1
 
@@ -139,7 +58,7 @@ while number < 10:
     print(square)
     number += 1
 
-# break keyword
+# Break keyword
 count = 0
 
 while True:
@@ -159,13 +78,13 @@ while True:
 
 zoo = ['lion', 'tiger', 'elephant', 'monkey', 'snake', 'giraffe']
 zoo2 = []
-#   0 hasta 5
-for i in range(len(zoo)):
+
+for i in range(len(zoo)):       # Este for realiza 6 iteraciones ya que el tamaño de zoo es 6, es decir (0, 5)
     zoo2.append(zoo.pop())
 
 print(zoo2)
 
-#continue keyword
+# Continue keyword
 for i in range(10):
     if i == 5:
         continue
@@ -177,4 +96,3 @@ for i in range(11):
         continue
     else:
         print(i)
-"""
