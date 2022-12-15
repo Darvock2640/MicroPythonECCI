@@ -99,6 +99,8 @@ class SSD1306:
     def text(self, string, x, y, col=1):
         self.framebuf.text(string, x, y, col)
 
+    def fill_rect(self, x, y, w, h, color):
+        self.framebuf.fill_rect(x, y, w, h, color)
 
 class SSD1306_I2C(SSD1306):
     def __init__(self, width, height, i2c, addr=0x3c, external_vcc=False):
@@ -124,7 +126,7 @@ class SSD1306_I2C(SSD1306):
         # Blast out the frame buffer using a single I2C transaction to support
         # hardware I2C interfaces.
         self.i2c.writeto(self.addr, self.buffer)
-
+    
     def poweron(self):
         pass
 
