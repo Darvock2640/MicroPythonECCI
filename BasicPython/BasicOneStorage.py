@@ -1,5 +1,8 @@
 # First program ......................................
-print("Hola mundo")
+print("Hello World")
+
+# Input program ......................................
+x = input("Write whatever what you want and save it \n")
 
 # Variable definition and type 
 number = 5
@@ -8,7 +11,7 @@ print(type(number))
 floatNumber = 3.0
 print(type(floatNumber))
 
-string = "Los strings también son variables"
+string = "Los strings también son variables (en realidad objetos)"
 print(type(string))
 
 # Type convertion
@@ -34,10 +37,12 @@ number =  number  - 1   # Substraction
 print("Substraction = " + str(number))
 number =  number * 4    # Multiplication
 print("Multiplication = " + str(number))
-number =  number ** 4    # Multiplication
+number =  number ** 4   # Pow
 print("Pow = " + str(number))
 result = number / 2     # number divided in three
 print("Divided = " + str(result))
+number = number // 3    # la división exacta se obtiene con doble slash
+print(number)
 remainder = number % 2  # this is the remainder of number dived divided two
 print("Remainder = " + str(remainder))
 
@@ -51,6 +56,8 @@ print("Number = " + str(number))
 number *= 3     # number = number * 3
 print("Number = " + str(number))
 number /= 2     # number = number / 2
+print("Number = " + str(number))
+number //= 2    # number = number // 2
 print("Number = " + str(number))
 number %= 7     # number = number % 5
 print("Number = " + str(number))
@@ -92,6 +99,8 @@ pyt = montyPython[6:]           # el limite inferior si contienen al elemento
 print(pyt)
 ty_py = montyPython[3:8]
 print(ty_py)
+print(montyPyhton[2::-1])       #Elimina las posiciones no apuntadas por los multiplos del numero
+
 
 # in operator 
 iceCream = "Ice Cream"      
@@ -113,82 +122,86 @@ print(len(phrase[int(len(phrase)/2):]))
 print(phrase[: int(len(phrase)/2) + 1])
 print(len(phrase[: int(len(phrase)/2) + 1]))
 
-# Character escaping
-dontWorry = "Don't worry about apostrophes"
-print(dontWorry)
+................ Character escaping ........................
+text = "Don't worry about the apostrophe"
+print(text)
+# The name of this ice cream is "sweet 'n' tasty"
+text = ' The name of this ice cream is "Sweet \'n\' tasty" '
+print(text)
 
-# The name of this ice-cream is "Sweet 'n' Tasty"
-print("The name of this ice-cream is \"Sweet 'n' Tasty\"")
-
-# Basic methods
+# ................ Basic Methods ............................
 name = "Alejandro"
-print(name)
 print(name.upper())
 print(name.lower())
 print(name.lower().count('a'))
 
-# String formatting
-name = "Pepito Pérez"
-years = 16
-print("Hello, Python! My name is %s" % name)
-print("I'm %i years old" % years)
-print("Hello python! My name is {} and I'm {} years old".format(name, years))
+# ................ String Formatting ............................
+name = "Alejandro"
+age = 17
+print("Hi " + name + " your age is " + str(age))
+print("Hi {} your age is {}".format(name, age))
+print("Hi %s your age is %i" %(name, age))
 
-# List
-numbers = [1, 4, 23, 6, 3.54, "uno"]
+# .................. List ......................................
+numbers = [1, 2.0, "three", True]
 print(numbers)
 print(type(numbers))
 print(numbers[3])
+print(numbers[-1])
 print(type(numbers[3]))
-print(numbers[2:5])
+print(numbers[2:])
 
-# List operations
-animals = ['elephant', 'lion', 'mouse', 'horse', 'fish', 'dolphin']
+# .................. List operations .........................
+animals = ["dog", "cat", "tiger", "cow", "duck", "bear", "monkey", "bird", "lion"]
 print(animals)
-animals += ['dog', 'cat']
+animals += ["donkey", "caterpillar"]
 print(animals)
-#animals *= 2
-#print(animals)
-animals.append("snake")
+animals *= 2
 print(animals)
-animals[2] = "monkey"
+animals.remove("tiger")
+print(animals)
+animals.append("\n")
+print(animals)
+# animals.append(["A", "B"])
+# print(animals)
+animals.sort()
+print(animals)
+x = animals.pop(1)
+print(x)
+animals.clear()
 print(animals)
 
-# Input
-X = input("Ingrese lo que sumercé considere necesario y luego oprima enter \n")
-print(X)
-print(type(X))
-nX = int(X)
-print(nX)
-print(type(nX))
-
-# List items (mutable)
-animals = ['elephant', 'lion', 'mouse', 'horse', 'fish', 'dolphin']
+# .................. List items (mutables) ...................
+animals = ["dog", "cat", "tiger", "cow", "duck", "bear", "monkey", "bird", "lion"]
 print(animals)
-animals[1:3] = ["cat"]
+animals[:3] = ["snake"]
 print(animals)
-animals[3:] = []
+animals[-2:] = []
 print(animals)
 animals[:] = []
 print(animals)
 
-# Tuples (inmutable)
-vowels = ('A', 'E', 'I', 'O', 'U')
+# .................. Tuples (inmutables) ...................
+vowels = ('a', 'e', 'i', 'o', 'u')
 print(vowels)
+print(type(vowels))
 print(len(vowels))
+x = vowels.__add__(tuple('b'))
+print(x)
 
-# Dictionaries
-phoneBook = {"Pepe" : [1,2,3,4,5,6], "Juan" : 2445873, "Pedro" : 7263434}
+.................. dictionaries ...................
+phoneBook = {"pepe" : 123456, "pedro" : 654321, "maria" : 987456}
 print(phoneBook)
-phoneBook["Juan"] = 1233211
+print(phoneBook["pepe"])
+phoneBook["pedro"] = 88888888
 print(phoneBook)
-phoneBook["Maria"] = 9887766
+del phoneBook["maria"]
 print(phoneBook)
-del phoneBook["Pedro"]
-print(phoneBook)
-print(phoneBook.values())
-print(phoneBook.keys())
+x = phoneBook.keys()
+z = phoneBook.values()
+print(x)
+print(type(x))
+print(z)
+print(type(z))
 
-# in keyword
-phoneBook = {"Pepe" : [1,2,3,4,5,6], "Juan" : 2445873, "Pedro" : 7263434}
-print(2445873 in phoneBook.values())
+print('pepe' in phoneBook)
