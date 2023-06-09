@@ -189,7 +189,7 @@ print(len(vowels))
 x = vowels.__add__(tuple('b'))
 print(x)
 
-.................. dictionaries ...................
+# .................. dictionaries ...................
 phoneBook = {"pepe" : 123456, "pedro" : 654321, "maria" : 987456}
 print(phoneBook)
 print(phoneBook["pepe"])
