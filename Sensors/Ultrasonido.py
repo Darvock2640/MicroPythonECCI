@@ -1,7 +1,7 @@
 from hcsr04 import HCSR04
 import time
 
-ultraSonido = HCSR04(trigger_pin=32, echo_pin=33, echo_timeout_us=10000)
+ultraSonido = HCSR04(trigger_pin=32, echo_pin=33)
 
 def main():
     while True:
