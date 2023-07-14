@@ -1,20 +1,11 @@
-import time, socket, uping, network
-from machine import ADC, Pin
-
-print("\n\nProyecto Prueba IoT\n\n")
+import time, network, uping, socket
 
 timeOutLimit = 45000
-ssid = "iPhone de Alejho"
-password = "11235813"
-HOST = "172.20.10.2"  # the host ipv4 address 
+ssid = "yourSSID"
+password = "yourPassword"
+HOST = "127.0.0.1"  # the host ipv4 address 
 PORT1 = "1234"
 PORT2 = "1235"
-
-accX = ADC(Pin(32), atten = ADC.ATTN_11DB)
-accX.width(ADC.WIDTH_12BIT)
-
-accY = ADC(Pin(33), atten = ADC.ATTN_11DB)
-accY.width(ADC.WIDTH_12BIT)
 
 socket1 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket2 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -37,15 +28,6 @@ def main():
     Connect2WiFi()
     socket1.connect((HOST,PORT1))
     socket2.connect((HOST,PORT2))
-
-    while True:
-        valueX = accX.read_uv() - 1650000
-        valueY = accY.read_uv() - 1650000
-        print("X: {}, Y: {}".format(valueX,valueY))
-        socket1.sendall(str(valueX).encode())
-        socket2.sendall(str(valueY).encode())
-        time.sleep_ms(250)
-
-
-
+    socket1.sendall(b'Hola mundo 1')
+    socket2.sendall(b'Hola mundo 2')
 

@@ -1,0 +1,291 @@
+[
+    {
+        "id": "f010d6800e531aec",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b015b6482405b51c",
+        "type": "ui_group",
+        "name": "Eje X",
+        "tab": "102a301ba6a6df26",
+        "order": 1,
+        "disp": true,
+        "width": "15",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "08ba5e0ed086671d",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "446f438eeca24816",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "102a301ba6a6df26",
+        "type": "ui_tab",
+        "name": "Inclinación",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "79f77c9321bfa2d6",
+        "type": "ui_group",
+        "name": "Eje Y",
+        "tab": "102a301ba6a6df26",
+        "order": 2,
+        "disp": true,
+        "width": "15",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "217b7d48a9cc350f",
+        "type": "tcp in",
+        "z": "f010d6800e531aec",
+        "name": "accX",
+        "server": "server",
+        "host": "",
+        "port": "1234",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 130,
+        "y": 100,
+        "wires": [
+            [
+                "9a704a6f0ebd1895",
+                "e596e8f992018c9e"
+            ]
+        ]
+    },
+    {
+        "id": "8418cd801827939e",
+        "type": "tcp in",
+        "z": "f010d6800e531aec",
+        "name": "accY",
+        "server": "server",
+        "host": "",
+        "port": "1235",
+        "datamode": "stream",
+        "datatype": "buffer",
+        "newline": "",
+        "topic": "",
+        "trim": false,
+        "base64": false,
+        "tls": "",
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "55c2e7d57497ba1c",
+                "6ac5b538c30fb0b8"
+            ]
+        ]
+    },
+    {
+        "id": "55c2e7d57497ba1c",
+        "type": "ui_gauge",
+        "z": "f010d6800e531aec",
+        "name": "",
+        "group": "79f77c9321bfa2d6",
+        "order": 0,
+        "width": "15",
+        "height": "10",
+        "gtype": "donut",
+        "title": "",
+        "label": "",
+        "format": "",
+        "min": "-330000",
+        "max": "330000",
+        "colors": [
+            "#00a0f0",
+            "#005078",
+            "#00283c"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 330,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "9a704a6f0ebd1895",
+        "type": "ui_gauge",
+        "z": "f010d6800e531aec",
+        "name": "",
+        "group": "b015b6482405b51c",
+        "order": 0,
+        "width": "15",
+        "height": "10",
+        "gtype": "donut",
+        "title": "",
+        "label": "",
+        "format": "",
+        "min": "-330000",
+        "max": "330000",
+        "colors": [
+            "#00a0f0",
+            "#005078",
+            "#00283c"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 330,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e596e8f992018c9e",
+        "type": "ui_text",
+        "z": "f010d6800e531aec",
+        "group": "b015b6482405b51c",
+        "order": 1,
+        "width": "15",
+        "height": "5",
+        "name": "",
+        "label": "Eje X",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "25",
+        "color": "#0094ce",
+        "x": 330,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6ac5b538c30fb0b8",
+        "type": "ui_text",
+        "z": "f010d6800e531aec",
+        "group": "79f77c9321bfa2d6",
+        "order": 1,
+        "width": "15",
+        "height": "5",
+        "name": "",
+        "label": "Eje Y",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": true,
+        "font": "Arial,Arial,Helvetica,sans-serif",
+        "fontSize": "20",
+        "color": "#0094ce",
+        "x": 330,
+        "y": 260,
+        "wires": []
+    }
+]
